@@ -9,7 +9,7 @@ This cookbooks provides configuration management for nodes run on Rightscale.
 
 * Chef: 0.10.10+
 
-### RightScale:
+### RightScale
 
 Most of the recipes need to be run on a RightScale-managed cloud instance aka RightScale Server. You may find some recipes useful for other environments.
 
@@ -42,8 +42,7 @@ TODO
 
 ## Recipes
 
-default
--------
+### default
 
 Includes the following recipes as a base (recommended) state for RightScale-managed nodes:
 
@@ -54,63 +53,51 @@ Includes the following recipes as a base (recommended) state for RightScale-mana
 * monitoring
 * tools
 
-add_sandbox_to_path
--------------------
+### add_sandbox_to_path
 
 Adds the RightLink sandbox to PATH in the Chef run.
 
-add_tags
---------
+### add_tags
 
 Adds an array of RightScale tags by node attribute.
 
-connect
--------
+### connect
 
 Connects the node to RightScale via token (applicable only to Blue Skies)
 
-enforce_path_sanity
--------------------
+### enforce_path_sanity
 
 Earlier versions of RightLink (< 5.9) do not employ 'path sanity'. This recipe adds common binary locations to PATH that some cookbooks will use.
 
-install_rightlink
------------------
+### install_rightlink
 
 Installs RightScale RightLink (applicable only to nodes that run another Chef).
 
-list_tags
----------
+### list_tags
 
 Lists the current RightScale tags set on the instance.
 
-monitoring
-----------
+### monitoring
 
 Sets-up RightScale Monitoring with collectd and the server's allocated Sketchy host.
 
-remove_tags
------------
+### remove_tags
 
 Removes an array of RightScale tags by node attribute.
 
-server_tags
------------
+### server_tags
 
 Adds recommended core RightScale tags to the server.
 
-standardize_chef_version
-------------------------
+### standardize_chef_version
 
 Patches the RightLink version of Chef to comply to GNU versioning scheme.
 
-tools
------
+### tools
 
 Installs RightScale Tools (awaiting gem release before can be possible).
 
-License and Authors
-===================
+## License and Authors
 
 * Author:: Chris Fordham <chris [at] fordham [hyphon] nagy [dot] id [dot] au>
 
