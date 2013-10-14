@@ -3,18 +3,17 @@ RightScale Cookbook
 
 This cookbooks provides configuration management for nodes run on Rightscale.
 
-Requirements
-============
+## Requirements
 
-## Chef:
+### Chef
 
 * Chef: 0.10.10+
 
-## RightScale:
+### RightScale:
 
 Most of the recipes need to be run on a RightScale-managed cloud instance aka RightScale Server. You may find some recipes useful for other environments.
 
-## Cookbooks:
+### Cookbooks
 
 Depends on the following coookbooks
 
@@ -23,7 +22,7 @@ Depends on the following coookbooks
 
 See the `metadata.rb` file for the latest dependencies.
 
-## Platforms:
+## Platforms
 
 The following platforms and versions are tested.
 
@@ -34,16 +33,14 @@ The following platform families are supported in the code, and are
 assumed to work based on the successful testing on Ubuntu and CentOS.
 
 * CentOS 6, 5
-# EL/RHEL 6, 5
+* EL/RHEL 6, 5
 * Fedora
 
-Attributes
-==========
+## Attributes
 
 TODO
 
-Recipes
-=======
+## Recipes
 
 default
 -------
