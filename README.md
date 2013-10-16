@@ -101,7 +101,7 @@ Installs RightScale Tools (awaiting gem release before can be possible).
 
 * Author:: Chris Fordham <chris [at] fordham [hyphon] nagy [dot] id [dot] au>
 
-* Copyright:: 2012-2013, RightScale, Inc
+* Copyright:: 2012-2013, Chris Fordham
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
