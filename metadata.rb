@@ -19,7 +19,7 @@ recipe "rightscale::add_sandbox_to_path", "Adds the RightLink sandbox to PATH wi
 recipe "rightscale::enforce_path_sanity", "Enforces Chef 'PATH sanity' within the enironment of the Chef run."
 recipe "rightscale::standardize_chef_version", "Fix Chef version to standard GNU versioning instead of RightScale fork."
 recipe "rightscale::connect", "Connect the host to RightScale via BlueSkies."
-recipe 'rightscale::disable_rightscale_epel', 'Disabled the RightScale-epel repo in /etc/yum.repos.d.'
+recipe 'rightscale::disable_rightscale_epel', 'Disables the RightScale-epel repo in /etc/yum.repos.d.'
 
 attribute "rightscale/enforce_path_sanity",
   :display_name => "RightScale Chef Enforce PATH Sanity",
