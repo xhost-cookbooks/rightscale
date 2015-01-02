@@ -15,15 +15,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-r = script 'disable_rightscale_epel' do
-  interpreter '/opt/rightscale/sandbox/bin/ruby'
-  code <<-EOH
-  require 'chef'
-  fe = Chef::Util::FileEdit.new('/etc/yum.repos.d/RightScale-epel.repo')
-  fe.search_file_replace_line(/enabled\=1/, 'enabled=0')
-  fe.write_file
-  EOH
-  action :nothing
-end
+if File.exist?('/etc/yum.repos.d/RightScale-epel.repo')
+  r = script 'disable_rightscale_epel' do
+    interpreter '/opt/rightscale/sandbox/bin/ruby'
+    code <<-EOH
+    require 'chef'
+    fe = Chef::Util::FileEdit.new('/etc/yum.repos.d/RightScale-epel.repo')
+    fe.search_file_replace_line(/enabled\=1/, 'enabled=0')
+    fe.write_file
+    EOH
+    action :nothing
+  end
 
-r.run_action(:run)
+  r.run_action(:run)
+end
